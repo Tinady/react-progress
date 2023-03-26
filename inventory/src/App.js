@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Info from "./info.js"
 
 function App() {
   return (
@@ -16,18 +17,7 @@ function App() {
   );
 }
 
-function Info(){
-  const showtitle=true;
-  const Title="this is my title";
 
-  return(
-    <div>
-      <h1>{showtitle? Title: "no title"}</h1>
-      <h1>Inventory system</h1>
-      <p>Manage your stuff.</p>
-    </div>
-  );
-}
 
 function Additem(){
   return(
