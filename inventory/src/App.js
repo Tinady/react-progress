@@ -11,8 +11,7 @@ function App() {
      <p>Tina</p>
      <Info/>
      <Additem text ="joe"/>
-     <Additem/>
-     <Additem/>
+     <ButtonState/>
      
 
     </div>
@@ -48,19 +47,19 @@ function ButtonState(){
   const[count, setCount]=useState(0);
 
   const updateTitle= () =>{
-    setTitle("here is the Title")
+    setTitle("here is the Title");
   }
 
   const updateButton= ()=>{
-    setCount(count+1)
+    setCount(count+1); 
   }
 
   return(
     <div>
       <p> title:{title} </p>
     <p>count:{count}</p>
-    <button onclick={updateTitle}>Update Title</button>
-    <button onclick={updateButton}>Update Button</button>
+    <button onClick={updateTitle}>Update Title</button>
+    <button onClick={updateButton}>Update Button</button>
     </div>
     
   )
