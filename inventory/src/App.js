@@ -1,5 +1,6 @@
 
 import './App.css';
+import { PropTypes } from 'prop-types';
 import Info from "./info.js"
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       
      <p>Tina</p>
      <Info/>
-     <Additem/>
+     <Additem text ="joe"/>
      <Additem/>
      <Additem/>
      
@@ -19,16 +20,26 @@ function App() {
 
 
 
-function Additem(){
+function Additem(props){
+  
   return(
     <div>
       <form>
         <label for="text-form"> type something </label>
-        <input type="text" id="text-form"/>
+        <input type="text" value= {props.number} id="text-form"/>
         </form>
+        <p>{props.number}</p>
       
-    </div>
+    </div> 
   )
+}
+
+Additem.defaultProps={
+  number:2
+}
+
+Additem.propTypes={
+  n:PropTypes.number
 }
 
 
