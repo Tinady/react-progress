@@ -58,7 +58,7 @@ function ButtonState(){
     <div>
       <p> title:{title} </p>
     <p>count:{count}</p>
-    <button onClick={updateTitle}>Update Title</button>
+    <button onClick={updateTitle}>Change Title</button>
     <button onClick={updateButton}>Update Button</button>
     </div>
     
