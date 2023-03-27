@@ -2,6 +2,7 @@
 import './App.css';
 import { PropTypes } from 'prop-types';
 import Info from "./info.js"
+import { useState } from 'react';
 
 function App() {
   return (
@@ -40,6 +41,31 @@ Additem.defaultProps={
 
 Additem.propTypes={
   n:PropTypes.number
+}
+
+function ButtonState(){
+  const[title, setTitle]=useState("");
+  const[count, setCount]=useState(0);
+
+  const updateTitle= () =>{
+    setTitle("here is the Title")
+  }
+
+  const updateButton= ()=>{
+    setCount(count+1)
+  }
+
+  return(
+    <div>
+      <p> title:{title} </p>
+    <p>count:{count}</p>
+    <button onclick={updateTitle}>Update Title</button>
+    <button onclick={updateButton}>Update Button</button>
+    </div>
+    
+  )
+
+
 }
 
 
